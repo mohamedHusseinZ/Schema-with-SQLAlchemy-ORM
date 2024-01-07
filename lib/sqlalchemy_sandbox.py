@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
-from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.decelarative import decelarative_base
 
-Base = declarative_base()
+Base = decelarative_base()
 
-class Student(Base):
-    pass
+class students(Base):
+    id = Column(Integer(), primary_key=true)
+    name = Column(String)
 
-if __name__ == '__main__':
-    pass
+    if __name__ ='__name__':
+        engine = create_engine('sqlite3 ///school.db')
+        Base.metadata.create_all(engine)
